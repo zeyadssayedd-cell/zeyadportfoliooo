@@ -6705,3 +6705,301 @@ img{
     filter:blur(0);
   }
 }
+
+/* =========================
+   V45 HARD MOBILE FIX
+   About + Services always appear correctly on phone/tablet.
+========================= */
+@media (max-width: 1024px){
+  html,body{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+  }
+
+  .page-section{
+    scroll-margin-top:78px !important;
+  }
+
+  /* ABOUT MOBILE FIX */
+  #about.about-page{
+    display:block !important;
+    position:relative !important;
+    min-height:auto !important;
+    height:auto !important;
+    padding:96px 18px 72px !important;
+    overflow:visible !important;
+    background:#ebe8e6 !important;
+  }
+
+  #about .about-wrap{
+    display:none !important;
+    height:0 !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+  }
+
+  #about .mobile-about{
+    display:block !important;
+    position:relative !important;
+    z-index:10 !important;
+    width:100% !important;
+    max-width:560px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    color:#111 !important;
+  }
+
+  #about .mobile-section-label,
+  #services .mobile-section-label{
+    display:block !important;
+    font-family:'Caveat', cursive !important;
+    font-size:clamp(32px, 8vw, 44px) !important;
+    line-height:.95 !important;
+    font-weight:700 !important;
+    color:#111 !important;
+    margin:0 0 16px !important;
+    transform:rotate(-2deg) !important;
+  }
+
+  #about .mobile-about h2,
+  #services .mobile-services h2{
+    display:block !important;
+    font-family:'Bebas Neue', sans-serif !important;
+    font-size:clamp(72px, 21vw, 112px) !important;
+    line-height:.84 !important;
+    letter-spacing:.01em !important;
+    margin:0 0 22px !important;
+    color:#111 !important;
+  }
+
+  #about .mobile-about h2 span,
+  #services .mobile-services h2 span{
+    display:block !important;
+  }
+
+  #about .mobile-about h2 span:last-child,
+  #services .mobile-services h2 span:last-child{
+    color:#46bdd5 !important;
+  }
+
+  #about .mobile-about-intro,
+  #services .mobile-services-intro{
+    display:block !important;
+    font-size:16.5px !important;
+    line-height:1.5 !important;
+    font-weight:500 !important;
+    margin:0 0 28px !important;
+    color:#111 !important;
+  }
+
+  #about .mobile-card,
+  #services .mobile-service-card{
+    display:block !important;
+    position:relative !important;
+    width:100% !important;
+    background:#f8f5ef !important;
+    border:2px solid #111 !important;
+    color:#111 !important;
+    padding:24px 20px !important;
+    margin:18px 0 !important;
+    min-height:0 !important;
+    height:auto !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    filter:drop-shadow(7px 7px 0 rgba(0,0,0,.10)) !important;
+  }
+
+  #about .mobile-card::before,
+  #services .mobile-service-card::before{
+    content:'' !important;
+    position:absolute !important;
+    top:-11px !important;
+    left:22px !important;
+    width:88px !important;
+    height:22px !important;
+    background:#111 !important;
+    transform:rotate(-2deg) !important;
+  }
+
+  #about .mobile-dark-card,
+  #services .mobile-service-dark{
+    background:#111 !important;
+    color:#fff !important;
+    border-color:#111 !important;
+    filter:drop-shadow(7px 7px 0 rgba(70,189,213,.26)) !important;
+  }
+
+  #about .mobile-card h3,
+  #services .mobile-service-card h3{
+    display:block !important;
+    font-size:21px !important;
+    line-height:1.08 !important;
+    font-weight:800 !important;
+    letter-spacing:.04em !important;
+    margin:0 0 13px !important;
+  }
+
+  #about .mobile-card p,
+  #about .mobile-card li,
+  #services .mobile-service-card p{
+    display:block !important;
+    font-size:14.5px !important;
+    line-height:1.55 !important;
+    font-weight:500 !important;
+    margin:0 !important;
+  }
+
+  #about .mobile-card ul{
+    display:grid !important;
+    gap:10px !important;
+    list-style:none !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+
+  #about .mobile-timeline{
+    display:grid !important;
+    gap:14px !important;
+  }
+
+  #about .mobile-timeline p{
+    border-left:3px solid #46bdd5 !important;
+    padding-left:13px !important;
+  }
+
+  #about .mobile-timeline strong{
+    display:block !important;
+    color:#46bdd5 !important;
+    font-size:20px !important;
+    margin-bottom:3px !important;
+  }
+
+  #about .mobile-tools{
+    display:grid !important;
+    grid-template-columns:repeat(4, 1fr) !important;
+    gap:12px !important;
+  }
+
+  #about .mobile-tools img{
+    display:block !important;
+    width:48px !important;
+    height:48px !important;
+    object-fit:contain !important;
+    background:#fff !important;
+    border:1.5px solid #111 !important;
+    padding:8px !important;
+  }
+
+  #about .mobile-values{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:10px !important;
+  }
+
+  #about .mobile-values span{
+    display:inline-flex !important;
+    background:#111 !important;
+    color:#fff !important;
+    padding:10px 12px !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+  }
+
+  /* SERVICES MOBILE FIX */
+  #services.services-page{
+    display:block !important;
+    position:relative !important;
+    min-height:auto !important;
+    height:auto !important;
+    padding:96px 18px 72px !important;
+    overflow:visible !important;
+    background:#ebe8e6 !important;
+  }
+
+  #services .services-wrap{
+    display:none !important;
+    height:0 !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:none !important;
+  }
+
+  #services .mobile-services{
+    display:block !important;
+    position:relative !important;
+    z-index:10 !important;
+    width:100% !important;
+    max-width:560px !important;
+    margin:0 auto !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    color:#111 !important;
+  }
+
+  #services .mobile-services-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  #services .mobile-service-card{
+    margin:0 !important;
+  }
+
+  #services .mobile-service-card img{
+    display:block !important;
+    width:42px !important;
+    height:42px !important;
+    object-fit:contain !important;
+    margin:0 0 18px !important;
+  }
+
+  /* Work readable on phone */
+  #work.work-page{
+    overflow:hidden !important;
+    padding-top:88px !important;
+  }
+
+  #work .work-wrap{
+    width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding-bottom:18px !important;
+  }
+
+  #work .work-stage{
+    margin-left:14px !important;
+    margin-right:14px !important;
+    transform:scale(.40) !important;
+    transform-origin:top left !important;
+  }
+}
+
+@media (max-width: 430px){
+  #about.about-page,
+  #services.services-page{
+    padding:88px 14px 64px !important;
+  }
+
+  #about .mobile-about h2,
+  #services .mobile-services h2{
+    font-size:clamp(66px, 21vw, 92px) !important;
+  }
+
+  #about .mobile-tools{
+    grid-template-columns:repeat(3, 1fr) !important;
+  }
+
+  #work .work-stage{
+    transform:scale(.36) !important;
+  }
+}

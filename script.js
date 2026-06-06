@@ -599,3 +599,52 @@ setTimeout(v44FinalMobileFix, 300);
 document.querySelectorAll('.work-filter button[data-filter]').forEach((btn)=>{
   btn.addEventListener('click', ()=>setTimeout(v44FinalMobileFix, 160));
 });
+
+/* V45: force mobile sections visible + correct work height */
+function v45HardMobileFix(){
+  const isMobile = window.innerWidth <= 1024;
+  const about = document.getElementById('about');
+  const services = document.getElementById('services');
+  const workWrap = document.getElementById('workWrap');
+  const workStage = document.getElementById('workStage');
+
+  if(isMobile){
+    if(about){
+      about.style.height = 'auto';
+      about.style.minHeight = 'auto';
+      about.style.overflow = 'visible';
+    }
+    if(services){
+      services.style.height = 'auto';
+      services.style.minHeight = 'auto';
+      services.style.overflow = 'visible';
+    }
+    document.querySelectorAll('#about .mobile-about, #services .mobile-services').forEach(el=>{
+      el.style.display = 'block';
+      el.style.visibility = 'visible';
+      el.style.opacity = '1';
+    });
+    document.querySelectorAll('#about .about-wrap, #services .services-wrap').forEach(el=>{
+      el.style.display = 'none';
+      el.style.height = '0px';
+    });
+
+    if(workWrap && workStage){
+      let baseH = 2120;
+      if(workStage.classList.contains('uiux-mode')) baseH = 1440;
+      if(workStage.classList.contains('branding-mode')) baseH = 1765;
+      if(workStage.classList.contains('print-mode')) baseH = 1765;
+      if(workStage.classList.contains('illustration-mode')) baseH = 1765;
+      const scale = window.innerWidth <= 430 ? .36 : .40;
+      workWrap.style.height = Math.max(window.innerWidth <= 430 ? 680 : 745, baseH * scale + 35) + 'px';
+    }
+  }
+}
+
+window.addEventListener('load', v45HardMobileFix, {once:true});
+window.addEventListener('resize', v45HardMobileFix, {passive:true});
+window.addEventListener('orientationchange', ()=>setTimeout(v45HardMobileFix, 300), {passive:true});
+setTimeout(v45HardMobileFix, 350);
+document.querySelectorAll('.work-filter button[data-filter]').forEach(btn=>{
+  btn.addEventListener('click', ()=>setTimeout(v45HardMobileFix, 180));
+});
