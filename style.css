@@ -5716,3 +5716,613 @@ body::after{
     font-size:14px;
   }
 }
+
+
+/* =========================
+   V43 MOBILE RESPONSIVE FIX
+   Keeps desktop design, scales collage pages, and makes home/contact readable on mobile.
+========================= */
+
+@media (hover:none), (pointer:coarse){
+  body{ cursor:auto !important; }
+  .custom-cursor{ display:none !important; }
+}
+
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  .fixed-nav{
+    padding:14px 24px !important;
+    gap:18px !important;
+  }
+
+  .fixed-nav nav{
+    gap:28px !important;
+  }
+
+  .work-btn{
+    padding:14px 20px !important;
+    font-size:13px !important;
+  }
+
+  .hero{
+    padding:96px 36px 30px !important;
+    gap:26px !important;
+  }
+
+  .hero-left h1 span{
+    font-size:128px !important;
+  }
+
+  .hero-left p{
+    font-size:20px !important;
+  }
+
+  .image-wrapper{
+    height:560px !important;
+  }
+
+  .main-image{
+    width:520px !important;
+    left:45px !important;
+  }
+
+  .stats{
+    flex-wrap:wrap !important;
+    gap:28px !important;
+    padding:30px 20px 60px !important;
+  }
+}
+
+/* Mobile nav + home */
+@media (max-width: 768px){
+  .fixed-nav{
+    height:auto !important;
+    min-height:72px !important;
+    padding:10px 14px !important;
+    align-items:center !important;
+    gap:10px !important;
+    overflow:hidden !important;
+  }
+
+  .fixed-nav .logo img,
+  .fixed-nav > a:first-child img{
+    width:58px !important;
+    min-width:58px !important;
+  }
+
+  .fixed-nav nav{
+    flex:1 !important;
+    display:flex !important;
+    gap:18px !important;
+    justify-content:flex-start !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    padding:8px 2px 10px !important;
+    scrollbar-width:none !important;
+  }
+
+  .fixed-nav nav::-webkit-scrollbar{ display:none !important; }
+
+  .fixed-nav nav a{
+    font-size:12px !important;
+    letter-spacing:.08em !important;
+    flex:0 0 auto !important;
+  }
+
+  .fixed-nav .work-btn{
+    display:none !important;
+  }
+
+  .page-section{
+    scroll-margin-top:78px !important;
+  }
+
+  .home-page{
+    padding-top:74px !important;
+  }
+
+  .hero{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    padding:34px 18px 0 !important;
+    gap:20px !important;
+  }
+
+  .hero-left,
+  .hero-right{
+    width:100% !important;
+  }
+
+  .tape-small{
+    width:58px !important;
+    top:6px !important;
+    left:2px !important;
+  }
+
+  .hero-left h1{
+    margin-top:34px !important;
+  }
+
+  .hero-left h1 span{
+    font-size:clamp(84px, 24vw, 112px) !important;
+    line-height:.82 !important;
+  }
+
+  .quote{
+    width:min(76vw, 290px) !important;
+    margin-top:18px !important;
+  }
+
+  .hero-left p{
+    font-size:17px !important;
+    line-height:1.45 !important;
+    margin-top:20px !important;
+  }
+
+  .scribble-left{
+    width:96px !important;
+  }
+
+  .view-work{
+    margin-top:24px !important;
+    font-size:17px !important;
+    gap:18px !important;
+  }
+
+  .view-work span{
+    font-size:38px !important;
+  }
+
+  .scribble-top{
+    width:140px !important;
+    margin-left:20px !important;
+    margin-bottom:8px !important;
+  }
+
+  .image-wrapper{
+    width:100% !important;
+    height:430px !important;
+  }
+
+  .main-image{
+    width:78vw !important;
+    max-width:360px !important;
+    left:50% !important;
+    top:12px !important;
+    transform:translateX(-50%) !important;
+  }
+
+  .paper-grid{
+    width:31vw !important;
+    max-width:135px !important;
+    left:0 !important;
+    bottom:28px !important;
+  }
+
+  .tape-top{
+    width:70px !important;
+    left:42vw !important;
+    top:-4px !important;
+  }
+
+  .paper-black{
+    width:35vw !important;
+    max-width:155px !important;
+    right:0 !important;
+    top:24px !important;
+  }
+
+  .paper-side{
+    width:34vw !important;
+    max-width:150px !important;
+    right:10px !important;
+    bottom:24px !important;
+  }
+
+  .note{
+    right:4px !important;
+    bottom:112px !important;
+  }
+
+  .note img{
+    width:36vw !important;
+    max-width:160px !important;
+  }
+
+  .bottom-logo{
+    right:28px !important;
+    bottom:38px !important;
+  }
+
+  .bottom-logo img{
+    width:110px !important;
+  }
+
+  .stats{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:18px !important;
+    padding:36px 18px 52px !important;
+  }
+
+  .stat h2{
+    font-size:44px !important;
+  }
+
+  .stat p{
+    font-size:15px !important;
+  }
+
+  .line{
+    display:none !important;
+  }
+
+  .services-marquee{
+    font-size:16px !important;
+    padding:16px 0 !important;
+  }
+
+  /* Keep big collage sections responsive by scaling their designed canvas */
+  .about-wrap{
+    width:100% !important;
+    overflow:hidden !important;
+    height:calc(1942px * ((100vw - 20px) / 1458)) !important;
+    min-height:520px !important;
+  }
+
+  .about-stage{
+    left:10px !important;
+    width:1458px !important;
+    height:1942px !important;
+    transform:scale(calc((100vw - 20px) / 1458)) !important;
+    transform-origin:top left !important;
+  }
+
+  .work-wrap{
+    width:100% !important;
+    overflow:hidden !important;
+    height:calc(2120px * ((100vw - 20px) / 1164)) !important;
+    min-height:680px !important;
+  }
+
+  .work-stage{
+    margin-left:10px !important;
+    margin-right:0 !important;
+    width:1164px !important;
+    transform:scale(calc((100vw - 20px) / 1164)) !important;
+    transform-origin:top left !important;
+  }
+
+  .work-page{
+    padding-top:72px !important;
+  }
+
+  .work-filter button{
+    font-size:22px !important;
+  }
+
+  .work-filter button.active{
+    font-size:20px !important;
+    padding:16px 38px 18px 30px !important;
+  }
+
+  .project-info a,
+  .download-cv-btn,
+  .back-home{
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  /* Services: scale the designed collage page instead of letting fixed positions overflow */
+  .services-page{
+    padding-top:86px !important;
+    padding-bottom:70px !important;
+    min-height:auto !important;
+  }
+
+  .services-wrap{
+    width:1164px !important;
+    max-width:none !important;
+    margin-left:10px !important;
+    margin-right:0 !important;
+    height:calc(1490px * ((100vw - 20px) / 1164)) !important;
+    transform:scale(calc((100vw - 20px) / 1164)) !important;
+    transform-origin:top left !important;
+  }
+
+  /* Contact stacked layout */
+  .contact-page{
+    padding-top:88px !important;
+    min-height:auto !important;
+  }
+
+  .contact-wrap{
+    width:calc(100vw - 28px) !important;
+  }
+
+  .contact-hero{
+    min-height:auto !important;
+    padding-top:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:36px !important;
+  }
+
+  .contact-intro{
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    width:min(100%, 430px) !important;
+    height:auto !important;
+    aspect-ratio:470/610 !important;
+    margin:0 auto !important;
+  }
+
+  .contact-paper-stack{
+    width:100% !important;
+  }
+
+  .contact-intro-copy{
+    left:25% !important;
+    top:15% !important;
+    width:62% !important;
+  }
+
+  .contact-intro-copy h2 span{
+    font-size:clamp(48px, 15vw, 72px) !important;
+  }
+
+  .contact-intro-copy p{
+    font-size:clamp(14px, 4.2vw, 17px) !important;
+    line-height:1.28 !important;
+  }
+
+  .contact-links{
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    width:100% !important;
+    gap:26px !important;
+  }
+
+  .contact-method{
+    grid-template-columns:78px 46px 1fr !important;
+    column-gap:8px !important;
+  }
+
+  .contact-method-icon,
+  .contact-method-paper{
+    width:72px !important;
+    height:72px !important;
+  }
+
+  .contact-method-symbol{
+    width:32px !important;
+    height:32px !important;
+  }
+
+  .contact-method-line{
+    width:42px !important;
+  }
+
+  .contact-method-text{
+    font-size:clamp(15px, 4.2vw, 18px) !important;
+    word-break:break-word !important;
+  }
+
+  .download-cv-btn{
+    margin-left:0 !important;
+    margin-top:0 !important;
+    width:min(100%, 250px) !important;
+    font-size:14px !important;
+    padding:15px 18px !important;
+  }
+
+  .contact-corner-note{
+    position:relative !important;
+    right:auto !important;
+    top:auto !important;
+    align-self:flex-end !important;
+    width:90px !important;
+  }
+
+  .contact-dot-grid{
+    position:relative !important;
+    right:auto !important;
+    top:auto !important;
+    width:100px !important;
+    height:96px !important;
+    margin-left:auto !important;
+    transform:scale(.8) !important;
+    transform-origin:right center !important;
+  }
+
+  .contact-footer{
+    margin-top:46px !important;
+    height:560px !important;
+  }
+
+  .contact-footer-strip{
+    height:560px !important;
+    object-position:center !important;
+  }
+
+  .contact-footer-left{
+    left:22px !important;
+    top:260px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:12px !important;
+  }
+
+  .contact-footer-left img{
+    width:64px !important;
+  }
+
+  .contact-footer-brand p{
+    font-size:17px !important;
+  }
+
+  .contact-footer-nav{
+    left:22px !important;
+    top:402px !important;
+    width:230px !important;
+    gap:14px 28px !important;
+  }
+
+  .contact-footer-note{
+    left:50% !important;
+    top:36px !important;
+    width:205px !important;
+    transform:translateX(-50%) !important;
+  }
+
+  .contact-footer-note-text{
+    font-size:24px !important;
+  }
+
+  .contact-footer-socials{
+    left:22px !important;
+    right:auto !important;
+    top:210px !important;
+    gap:26px !important;
+  }
+
+  .contact-social-link{
+    width:42px !important;
+    height:42px !important;
+  }
+
+  .contact-social-link img{
+    width:34px !important;
+    height:34px !important;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 430px){
+  .fixed-nav{
+    padding:8px 10px !important;
+  }
+
+  .fixed-nav .logo img,
+  .fixed-nav > a:first-child img{
+    width:50px !important;
+    min-width:50px !important;
+  }
+
+  .fixed-nav nav{
+    gap:14px !important;
+  }
+
+  .fixed-nav nav a{
+    font-size:11px !important;
+  }
+
+  .hero-left h1 span{
+    font-size:clamp(74px, 25vw, 96px) !important;
+  }
+
+  .hero-left p{
+    font-size:15.5px !important;
+  }
+
+  .image-wrapper{
+    height:390px !important;
+  }
+
+  .stats{
+    grid-template-columns:1fr !important;
+  }
+
+  .about-wrap{
+    min-height:500px !important;
+  }
+
+  .work-wrap{
+    min-height:650px !important;
+  }
+
+  .services-wrap{
+    margin-left:8px !important;
+    height:calc(1490px * ((100vw - 16px) / 1164)) !important;
+    transform:scale(calc((100vw - 16px) / 1164)) !important;
+  }
+
+  .about-stage{
+    left:8px !important;
+    transform:scale(calc((100vw - 16px) / 1458)) !important;
+  }
+
+  .work-stage{
+    margin-left:8px !important;
+    transform:scale(calc((100vw - 16px) / 1164)) !important;
+  }
+
+  .contact-method{
+    grid-template-columns:68px 34px 1fr !important;
+  }
+
+  .contact-method-icon,
+  .contact-method-paper{
+    width:64px !important;
+    height:64px !important;
+  }
+
+  .contact-method-symbol{
+    width:28px !important;
+    height:28px !important;
+  }
+
+  .contact-method-line{
+    width:30px !important;
+  }
+
+  .contact-footer{
+    height:600px !important;
+  }
+
+  .contact-footer-strip{
+    height:600px !important;
+  }
+
+  .contact-footer-nav{
+    top:430px !important;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape){
+  .home-page{
+    padding-top:68px !important;
+  }
+
+  .hero{
+    flex-direction:row !important;
+    padding:28px 18px 0 !important;
+  }
+
+  .hero-left h1 span{
+    font-size:82px !important;
+  }
+
+  .hero-left p{
+    font-size:15px !important;
+  }
+
+  .image-wrapper{
+    height:330px !important;
+  }
+
+  .main-image{
+    width:310px !important;
+  }
+}
