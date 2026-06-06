@@ -648,3 +648,20 @@ setTimeout(v45HardMobileFix, 350);
 document.querySelectorAll('.work-filter button[data-filter]').forEach(btn=>{
   btn.addEventListener('click', ()=>setTimeout(v45HardMobileFix, 180));
 });
+
+
+/* V47 final override: keep mobile About/Services natural height */
+function v47NaturalMobileSections(){
+  if(window.innerWidth <= 768){
+    const aboutWrap = document.getElementById('aboutWrap');
+    if(aboutWrap) aboutWrap.style.height = '0px';
+    const aboutPage = document.getElementById('about');
+    if(aboutPage) aboutPage.style.height = 'auto';
+
+    const servicesPage = document.getElementById('services');
+    if(servicesPage) servicesPage.style.height = 'auto';
+  }
+}
+window.addEventListener('resize', v47NaturalMobileSections, {passive:true});
+window.addEventListener('orientationchange', ()=>setTimeout(v47NaturalMobileSections, 220), {passive:true});
+setTimeout(v47NaturalMobileSections, 260);
