@@ -537,3 +537,65 @@ window.addEventListener('resize',()=>{
   }
 }, {passive:true});
 
+
+
+/* V43 mobile responsive helper */
+function v43MobileReflow(){
+  const isMobile = window.innerWidth <= 768;
+  if(!isMobile) return;
+
+  const aboutWrap = document.getElementById('aboutWrap');
+  if(aboutWrap){
+    const scale = (window.innerWidth - 20) / 1458;
+    aboutWrap.style.height = Math.max(500, 1942 * scale) + 'px';
+  }
+
+  const workWrap = document.getElementById('workWrap');
+  const workStage = document.getElementById('workStage');
+  if(workWrap && workStage){
+    const scale = (window.innerWidth - 20) / 1164;
+    let baseH = 2120;
+    if(workStage.classList.contains('uiux-mode')) baseH = 1440;
+    if(workStage.classList.contains('branding-mode')) baseH = 1765;
+    if(workStage.classList.contains('print-mode')) baseH = 1765;
+    if(workStage.classList.contains('social-mode')) baseH = 2120;
+    if(workStage.classList.contains('illustration-mode')) baseH = 1765;
+    workWrap.style.height = Math.max(650, baseH * scale) + 'px';
+  }
+}
+
+window.addEventListener('resize', v43MobileReflow, {passive:true});
+window.addEventListener('orientationchange', ()=>setTimeout(v43MobileReflow, 250), {passive:true});
+setTimeout(v43MobileReflow, 250);
+
+document.querySelectorAll('.work-filter button[data-filter]').forEach((btn)=>{
+  btn.addEventListener('click', ()=>setTimeout(v43MobileReflow, 120));
+});
+
+
+/* V44 mobile final helper */
+function v44FinalMobileFix(){
+  if(window.innerWidth > 768) return;
+
+  const workWrap = document.getElementById('workWrap');
+  const workStage = document.getElementById('workStage');
+  if(workWrap && workStage){
+    let baseH = 2120;
+    if(workStage.classList.contains('uiux-mode')) baseH = 1440;
+    if(workStage.classList.contains('branding-mode')) baseH = 1765;
+    if(workStage.classList.contains('print-mode')) baseH = 1765;
+    if(workStage.classList.contains('illustration-mode')) baseH = 1765;
+    if(workStage.classList.contains('social-mode')) baseH = 2120;
+
+    const scale = window.innerWidth <= 380 ? .34 : (window.innerWidth <= 430 ? .37 : .42);
+    workWrap.style.height = Math.max(window.innerWidth <= 430 ? 705 : 760, baseH * scale + 30) + 'px';
+  }
+}
+
+window.addEventListener('resize', v44FinalMobileFix, {passive:true});
+window.addEventListener('orientationchange', ()=>setTimeout(v44FinalMobileFix, 240), {passive:true});
+setTimeout(v44FinalMobileFix, 300);
+
+document.querySelectorAll('.work-filter button[data-filter]').forEach((btn)=>{
+  btn.addEventListener('click', ()=>setTimeout(v44FinalMobileFix, 160));
+});

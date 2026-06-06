@@ -6326,3 +6326,382 @@ img{
     width:310px !important;
   }
 }
+
+
+/* =========================
+   V44 FULL MOBILE RESPONSIVE FIX
+   About + Services are rebuilt into clean mobile cards.
+========================= */
+
+.mobile-about,
+.mobile-services{
+  display:none;
+}
+
+/* Better general responsive polish */
+@media (max-width: 768px){
+  .mobile-about,
+  .mobile-services{
+    display:block !important;
+  }
+
+  /* Hide desktop collage versions on mobile because they are too detailed for phone width */
+  .about-page .about-wrap,
+  .services-page .services-wrap{
+    display:none !important;
+  }
+
+  .about-page,
+  .services-page{
+    min-height:auto !important;
+    padding:88px 18px 70px !important;
+    overflow:hidden !important;
+    background:#ebe8e6 !important;
+  }
+
+  .mobile-section-label{
+    font-family:'Caveat', cursive;
+    font-size:38px;
+    line-height:1;
+    font-weight:700;
+    transform:rotate(-2deg);
+    margin-bottom:16px;
+    color:#111;
+  }
+
+  .mobile-about h2,
+  .mobile-services h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:clamp(76px, 22vw, 108px);
+    line-height:.86;
+    letter-spacing:.015em;
+    margin:0 0 22px;
+  }
+
+  .mobile-about h2 span,
+  .mobile-services h2 span{
+    display:block;
+  }
+
+  .mobile-about h2 span:last-child,
+  .mobile-services h2 span:last-child{
+    color:#46bdd5;
+  }
+
+  .mobile-about-intro,
+  .mobile-services-intro{
+    font-size:17px;
+    line-height:1.5;
+    font-weight:500;
+    margin:0 0 28px;
+    max-width:92vw;
+  }
+
+  .mobile-card,
+  .mobile-service-card{
+    position:relative;
+    width:100%;
+    border:2px solid rgba(17,17,17,.88);
+    background:#f8f5ef;
+    padding:24px 22px;
+    margin:18px 0;
+    filter:drop-shadow(8px 8px 0 rgba(17,17,17,.08));
+    transform:translateY(0);
+    transition:transform .35s cubic-bezier(.2,.85,.2,1), filter .35s ease, background .35s ease;
+    animation:mobileCardIn .7s cubic-bezier(.2,.85,.2,1) both;
+  }
+
+  .mobile-card:nth-of-type(2),
+  .mobile-service-card:nth-child(2){ animation-delay:.06s; }
+  .mobile-card:nth-of-type(3),
+  .mobile-service-card:nth-child(3){ animation-delay:.12s; }
+  .mobile-card:nth-of-type(4),
+  .mobile-service-card:nth-child(4){ animation-delay:.18s; }
+  .mobile-card:nth-of-type(5),
+  .mobile-service-card:nth-child(5){ animation-delay:.24s; }
+  .mobile-card:nth-of-type(6),
+  .mobile-service-card:nth-child(6){ animation-delay:.30s; }
+
+  .mobile-card::before,
+  .mobile-service-card::before{
+    content:'';
+    position:absolute;
+    top:-10px;
+    left:22px;
+    width:90px;
+    height:22px;
+    background:#111;
+    transform:rotate(-2deg);
+  }
+
+  .mobile-dark-card,
+  .mobile-service-dark{
+    background:#111 !important;
+    color:#fff !important;
+    border-color:#111 !important;
+    filter:drop-shadow(8px 8px 0 rgba(70,189,213,.22));
+  }
+
+  .mobile-card h3,
+  .mobile-service-card h3{
+    font-size:22px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:.04em;
+    margin:0 0 14px;
+  }
+
+  .mobile-card p,
+  .mobile-service-card p,
+  .mobile-card li{
+    font-size:15px;
+    line-height:1.55;
+    font-weight:500;
+  }
+
+  .mobile-card ul{
+    list-style:none;
+    display:grid;
+    gap:10px;
+  }
+
+  .mobile-card li::before{
+    content:'＋';
+    color:#46bdd5;
+    font-weight:800;
+    margin-right:8px;
+  }
+
+  .mobile-card:hover,
+  .mobile-service-card:hover{
+    transform:translateY(-7px) rotate(-.4deg);
+    filter:drop-shadow(10px 12px 0 rgba(17,17,17,.12));
+  }
+
+  .mobile-dark-card:hover,
+  .mobile-service-dark:hover{
+    filter:drop-shadow(10px 12px 0 rgba(70,189,213,.28));
+  }
+
+  .mobile-timeline{
+    display:grid;
+    gap:14px;
+  }
+
+  .mobile-timeline p{
+    padding-left:14px;
+    border-left:3px solid #46bdd5;
+  }
+
+  .mobile-timeline strong{
+    display:block;
+    font-size:20px;
+    color:#46bdd5;
+    margin-bottom:3px;
+  }
+
+  .mobile-tools{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    align-items:center;
+  }
+
+  .mobile-tools img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+    padding:8px;
+    background:#fff;
+    border:1.5px solid #111;
+    transition:transform .25s ease;
+  }
+
+  .mobile-tools img:hover{
+    transform:translateY(-5px) rotate(-4deg);
+  }
+
+  .mobile-values{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .mobile-values span{
+    display:inline-flex;
+    padding:10px 13px;
+    background:#111;
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.04em;
+  }
+
+  .mobile-services-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+
+  .mobile-service-card img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    margin-bottom:18px;
+    transition:transform .3s cubic-bezier(.2,.85,.2,1);
+  }
+
+  .mobile-service-card:hover img{
+    transform:translateY(-6px) scale(1.12) rotate(-5deg);
+  }
+
+  /* Better work on mobile: make it a little larger and allow safe horizontal viewing */
+  .work-page{
+    padding-top:84px !important;
+  }
+
+  .work-wrap{
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding-bottom:10px !important;
+    min-height:760px !important;
+  }
+
+  .work-stage{
+    margin-left:14px !important;
+    margin-right:14px !important;
+    transform:scale(.42) !important;
+    transform-origin:top left !important;
+  }
+
+  .work-wrap::-webkit-scrollbar{
+    height:6px;
+  }
+
+  .work-wrap::-webkit-scrollbar-thumb{
+    background:#111;
+    border-radius:99px;
+  }
+
+  .work-filter button{
+    cursor:pointer !important;
+  }
+
+  /* Preloader smaller on phones */
+  .preloader-card-wrap{
+    width:82vw !important;
+  }
+
+  .preloader-welcome{
+    font-size:16px !important;
+    letter-spacing:.18em !important;
+  }
+
+  .preloader-loading-row,
+  .preloader-progress-track{
+    width:70vw !important;
+  }
+
+  /* Contact final phone fixes */
+  .contact-page{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .contact-method{
+    width:100% !important;
+  }
+
+  .contact-method-text{
+    font-size:15.5px !important;
+  }
+
+  .download-cv-btn{
+    margin-top:8px !important;
+    width:230px !important;
+  }
+}
+
+@media (max-width: 430px){
+  .about-page,
+  .services-page{
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+
+  .mobile-section-label{
+    font-size:34px;
+  }
+
+  .mobile-about h2,
+  .mobile-services h2{
+    font-size:clamp(68px, 21vw, 90px);
+  }
+
+  .mobile-about-intro,
+  .mobile-services-intro{
+    font-size:15.5px;
+  }
+
+  .mobile-card,
+  .mobile-service-card{
+    padding:23px 18px;
+  }
+
+  .mobile-card h3,
+  .mobile-service-card h3{
+    font-size:20px;
+  }
+
+  .mobile-card p,
+  .mobile-service-card p,
+  .mobile-card li{
+    font-size:14px;
+  }
+
+  .mobile-tools{
+    grid-template-columns:repeat(3, 1fr);
+  }
+
+  .mobile-tools img{
+    width:46px;
+    height:46px;
+  }
+
+  .work-stage{
+    transform:scale(.37) !important;
+  }
+
+  .work-wrap{
+    min-height:705px !important;
+  }
+}
+
+@media (max-width: 380px){
+  .work-stage{
+    transform:scale(.34) !important;
+  }
+
+  .work-wrap{
+    min-height:660px !important;
+  }
+
+  .mobile-about h2,
+  .mobile-services h2{
+    font-size:66px;
+  }
+}
+
+@keyframes mobileCardIn{
+  from{
+    opacity:0;
+    transform:translateY(28px) scale(.98);
+    filter:blur(7px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
+}
