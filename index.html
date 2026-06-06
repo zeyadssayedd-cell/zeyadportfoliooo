@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZE Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="one-page-body preloading">
+<div class="preloader-screen" id="preloader" aria-hidden="true">
+  <div class="preloader-dots" aria-hidden="true"></div>
+  <div class="preloader-vertical">GRAPHIC DESIGNER</div>
+  <div class="preloader-inner">
+    <div class="preloader-welcome">WELCOME TO MY WORLD</div>
+    <div class="preloader-card-wrap">
+      <img class="preloader-card" src="assets/preloader-paper.png" alt="ZE preloader card">
+      <div class="preloader-shine"></div>
+    </div>
+    <div class="preloader-loading-row">
+      <div class="preloader-loading-label">LOADING</div>
+      <div class="preloader-loading-value" id="preloaderPercent">0%</div>
+    </div>
+    <div class="preloader-progress-track">
+      <span class="preloader-progress-fill" id="preloaderBar"></span>
+    </div>
+  </div>
+</div>
+<div class="pen-cursor" id="penCursor"></div>
+
+<header class="navbar fixed-nav">
+  <div class="logo"><a href="#home" class="nav-jump"><img src="assets/logo.png" alt="ZE logo"></a></div>
+  <nav>
+    <a class="active" href="#home" data-section="home">HOME</a>
+    <a href="#about" data-section="about">ABOUT</a>
+    <a href="#work" data-section="work">WORK</a>
+    <a href="#services" data-section="services">SERVICES</a>
+    <a href="#contact" data-section="contact">CONTACT</a>
+  </nav>
+  <a class="work-btn" href="https://wa.me/201100328848" target="_blank" rel="noopener noreferrer">LET’S WORK TOGETHER <span>↗</span></a>
+</header>
+
+<main>
+  <section class="home-page page-section" id="home" data-section-name="home">
+    <section class="hero">
+      <div class="hero-left">
+        <img class="tape-small float" src="assets/tape-left.png" alt="">
+        <h1>
+          <span class="black">CREATE</span>
+          <span class="blue">IMPACT</span>
+        </h1>
+        <div class="quote">
+          <img src="assets/quote-1.png" alt="">
+          <img src="assets/quote-2.png" alt="">
+        </div>
+        <p>We are a creative studio building<br>brands and digital experiences<br>that make a difference.</p>
+        <img class="scribble-left float" src="assets/scribble-left.png" alt="">
+        <a href="#about" class="view-work nav-jump">VIEW ABOUT <span>→</span></a>
+      </div>
+
+      <div class="hero-right">
+        <img class="scribble-top float" src="assets/scribble-top.png" alt="">
+        <div class="image-wrapper">
+          <img class="paper-grid float" src="assets/grid.png" alt="">
+          <img class="main-image" src="assets/person.png" alt="">
+          <img class="tape-top float" src="assets/tape-top.png" alt="">
+          <img class="paper-black float" src="assets/paper-black.png" alt="">
+          <img class="paper-side float" src="assets/paper-side.png" alt="">
+          <div class="note float"><img src="assets/note.png" alt=""></div>
+          <div class="bottom-logo float"><img src="assets/logo-white.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><h2>50+</h2><p>PROJECTS</p></div>
+      <div class="line"></div>
+      <div class="stat"><h2>20+</h2><p>CLIENTS</p></div>
+      <div class="line"></div>
+      <div class="stat"><h2>2+</h2><p>YEARS</p></div>
+    </section>
+
+    <section class="services-marquee" aria-label="Services marquee">
+      <div class="marquee-track">
+        <span>UI UX</span><span>BRANDING</span><span>MOTION</span><span>VIDEO EDITING</span><span>ILLUSTRATION</span><span>SOCIAL MEDIA</span><span>PRINT DESIGN</span>
+        <span>UI UX</span><span>BRANDING</span><span>MOTION</span><span>VIDEO EDITING</span><span>ILLUSTRATION</span><span>SOCIAL MEDIA</span><span>PRINT DESIGN</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="about-page page-section" id="about" data-section-name="about">
+    <main class="about-wrap" id="aboutWrap">
+      <div class="about-stage" id="aboutStage">
+        <section class="about-title scroll-reveal" data-tilt>
+          <div class="designer-word">GRAPHIC&nbsp;&nbsp; DESIGNER</div>
+          <h1><span>ABOUT</span><span>ME</span></h1>
+          <img class="about-title-scribble micro-float" src="assets/about-scribble.png" alt="">
+          <p class="script-line">I don’t just design,<br>I solve problems with creativity.</p>
+          <p class="about-copy">I'm a graphic designer and creative thinker<br>who believes in the power of ideas, visuals,<br>and meaningful design. I help brands communicate clearly,<br>stand out, and create real impact.</p>
+        </section>
+
+        <section class="quote-collage scroll-reveal scroll-quote" data-depth="24" data-tilt>
+          <img class="quote-grid micro-float" src="assets/about-grid-piece.png" alt="">
+          <img class="quote-paper micro-float-slow" src="assets/about-big-quote.png" alt="">
+          <img class="quote-x micro-float" src="assets/about-paper-x.png" alt="">
+          <div class="logo-paper micro-float-slow">
+            <img class="logo-paper-bg" src="assets/about-card-blank.png" alt="">
+            <img class="logo-paper-mark" src="assets/about-logo-blue.png" alt="">
+          </div>
+        </section>
+
+        <section class="journey-card collage-card scroll-reveal" data-tilt>
+          <img class="journey-bg" src="assets/about-paper-large.png" alt="">
+          <img class="journey-label-bg" src="assets/about-black-tape.png" alt="">
+          <h3>MY JOURNEY</h3>
+          <p class="journey-script">From curiosity to creativity.</p>
+          <img class="journey-scribble" src="assets/about-scribble.png" alt="">
+          <p class="journey-text">My design journey started with curiosity and passion for visuals. Over the years, I’ve worked on diverse projects, collaborated with amazing people, and continuously learned, evolved, and refined my craft.</p>
+        </section>
+
+        <section class="timeline-card collage-card scroll-reveal" data-tilt>
+          <img class="timeline-bg" src="assets/about-timeline.png" alt="">
+          <img class="timeline-label-bg" src="assets/about-beige-tape.png" alt="">
+          <h3>TIMELINE</h3>
+          <div class="tl tl-2023"><strong>2023</strong><p>Started exploring design<br>and visual communication.</p></div>
+          <div class="tl tl-2025"><strong>2025</strong><p>Worked with clients and<br>agencies on real projects.</p></div>
+          <div class="tl tl-2026"><strong>2026</strong><p>Building brands and digital<br>experiences that make impact.</p></div>
+        </section>
+
+        <section class="tools-card collage-card scroll-reveal" data-tilt>
+          <img class="tools-bg" src="assets/about-grid-wide.png" alt="">
+          <img class="tools-label-bg" src="assets/about-black-tape.png" alt="">
+          <h3>TOOLS USED</h3>
+          <div class="tool-grid">
+            <img src="assets/tool-ps.png" alt="Photoshop">
+            <img src="assets/tool-ai.png" alt="Illustrator">
+            <img src="assets/tool-id.png" alt="InDesign">
+            <img src="assets/tool-ae.png" alt="After Effects">
+            <img src="assets/tool-pr.png" alt="Premiere Pro">
+            <img src="assets/tool-figma.png" alt="Figma">
+            <img src="assets/tool-maya.png" alt="Maya">
+          </div>
+        </section>
+
+        <section class="approach-card collage-card scroll-reveal" data-tilt>
+          <img class="approach-bg" src="assets/about-black-card.png" alt="">
+          <div class="approach-label">MY<br>APPROACH</div>
+          <ul>
+            <li><span>＋</span>Understand deeply</li>
+            <li><span>＋</span>Think strategically</li>
+            <li><span>＋</span>Design intentionally</li>
+            <li><span>＋</span>Deliver with purpose</li>
+          </ul>
+        </section>
+
+        <section class="photo-card collage-card scroll-reveal" data-tilt>
+          <img src="assets/about-polaroid.png" alt="Ideas sketchbook">
+          <p>Ideas. Sketches. Solutions.</p>
+        </section>
+
+        <section class="value-card collage-card scroll-reveal" data-tilt>
+          <img class="value-bg" src="assets/about-grid-taped.png" alt="">
+          <img class="value-label-bg" src="assets/about-black-tape.png" alt="">
+          <h3>WHAT I<br>VALUE</h3>
+          <div class="values-list">
+            <p><img src="assets/icon-creativity.png" alt="">Creativity</p>
+            <p><img src="assets/icon-collab.png" alt="">Collaboration</p>
+            <p><img src="assets/icon-target.png" alt="">Purpose</p>
+            <p><img src="assets/icon-diamond.png" alt="">Quality</p>
+          </div>
+        </section>
+
+        <section class="beyond-card collage-card scroll-reveal" data-tilt>
+          <img class="beyond-bg" src="assets/about-paper-holes.png" alt="">
+          <img class="beyond-label-bg" src="assets/about-black-tape.png" alt="">
+          <h3>Beyond<br>Design</h3>
+          <p>I’m passionate about minimalism, photography, music, and traveling. They inspire me to see the world differently and bring fresh perspectives to my work.</p>
+          <div class="beyond-icons">
+            <img src="assets/icon-camera.png" alt="">
+            <img src="assets/icon-music.png" alt="">
+            <img src="assets/icon-plane.png" alt="">
+          </div>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <section class="work-page page-section" id="work" data-section-name="work">
+    <main class="work-wrap" id="workWrap">
+      <div class="work-stage" id="workStage">
+        <img class="work-side-piece work-reveal" src="assets/work-selected-side.png" alt="">
+        <section class="work-hero-copy work-reveal" data-work-tilt>
+          <h1><span>ARCHIVE</span><span>OF VISUAL</span><span class="blue">STORIES</span></h1>
+          <p>A collection of projects that<br>reflect ideas, creativity and purpose.</p>
+          <img class="work-title-scribble" src="assets/about-scribble.png" alt="">
+        </section>
+
+        <section class="work-hero-collage work-reveal" data-work-tilt>
+          <img class="work-black-hero-img" src="assets/work-black-hero.png" alt="">
+          <img class="work-grid-under" src="assets/about-grid-piece.png" alt="">
+          <p>Every project<br>has a story.<br>Here are some<br>of mine.</p>
+          <img class="work-hero-scribble" src="assets/about-scribble.png" alt="">
+        </section>
+
+        <img class="work-purpose-note work-reveal" src="assets/work-purpose-note.png" alt="Designing with purpose. Creating with impact.">
+
+        <nav class="work-filter work-reveal" aria-label="Work categories">
+          <button class="active" type="button" data-filter="all">ALL</button>
+          <button type="button" data-filter="branding">BRANDING</button>
+          <button type="button" data-filter="uiux">UI/UX</button>
+          <button type="button" data-filter="print">PRINT</button>
+          <button type="button" data-filter="social">SOCIAL MEDIA</button>
+          <button type="button" data-filter="illustration">ILLUSTRATION</button>
+        </nav>
+
+        <section class="project-row project-01 all-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>SAUDI FOUNDING DAY<br>CAMPAIGN</h2>
+            <h3>BRANDING</h3>
+            <ul><li>Poster Design</li><li>Visual Identity</li><li>Branding</li></ul>
+            <p>Saudi Founding Day campaign for Qabs Tea & Bakery with bold promotional visuals and cultural branding.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/work-qabas.png" alt="Saudi founding day campaign">
+        </section>
+
+        <section class="project-row project-02 all-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>PETCARE APP</h2>
+            <h3>UI & UX</h3>
+            <ul><li>Mobile UI Design</li><li>User Experience</li><li>Prototyping</li></ul>
+            <p>Pet care education app designed to make learning about animal care simple, friendly, and engaging.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/work-petcare.png" alt="Petcare app screens">
+        </section>
+
+        <section class="project-row project-03 all-project work-reveal" data-work-tilt>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h2>PAWCHEF</h2>
+            <h3>BRAND ENTITY</h3>
+            <ul><li>Visual Identity</li><li>Brand Applications</li><li>Pet Care Branding</li></ul>
+            <p>Friendly and modern brand identity created for PawChef, focused on pet care products with warm visuals and clean branding applications.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/work-pawchef.png" alt="PawChef brand applications">
+        </section>
+
+        <section class="project-row project-04 all-project work-reveal" data-work-tilt>
+          <div class="project-number">04</div>
+          <div class="project-info">
+            <h2>DIGITAL ART ILLUSTRATIONS</h2>
+            <h3>ILLUSTRATION</h3>
+            <ul><li>Character Design</li><li>Portrait Study</li><li>Eye Study</li></ul>
+            <p>A collection of digital illustrations exploring characters, portraits, details, and visual storytelling.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/work-digital-art.png" alt="Digital art illustrations">
+        </section>
+
+        <section class="project-row project-01 branding-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>NATIONAL MUSEUM OF EGYPTIAN<br>CIVILIZATION</h2>
+            <h3>BRANDING</h3>
+            <ul><li>Logo Design</li><li>Visual Identity</li><li>Brand Identity</li></ul>
+            <p>A visual identity project inspired by Egypt’s cultural heritage, combining historical elements with a modern and memorable design.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/branding-museum.png" alt="National Museum of Egyptian Civilization branding">
+        </section>
+
+        <section class="project-row project-02 branding-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>PETEDU</h2>
+            <h3>BRANDING</h3>
+            <ul><li>Logo Design</li><li>Visual Identity</li><li>Brand Applications</li></ul>
+            <p>A pet-focused branding project featuring a modern visual identity that promotes care, education, and community through a friendly and memorable experience.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/branding-petedu.png" alt="PETEDU branding">
+        </section>
+
+        <section class="project-row project-03 branding-project work-reveal" data-work-tilt>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h2>PAWCHEF</h2>
+            <h3>BRAND IDENTITY</h3>
+            <ul><li>Visual Identity</li><li>Brand Applications</li><li>Pet Care Branding</li></ul>
+            <p>Friendly and modern brand identity created for PawChef, focused on pet care products with warm visuals and clean branding applications.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/branding-pawchef.png" alt="PawChef branding">
+        </section>
+
+
+        <section class="project-row project-01 uiux-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>PETEDU MOBILE<br>APP</h2>
+            <h3>UI/UX DESIGN</h3>
+            <ul><li>User Interface Design</li><li>User Experience Design</li><li>Mobile Application</li></ul>
+            <p>A mobile app designed to connect pet owners through educational content, expert guidance, and a user-friendly experience that promotes pet care and community engagement.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/uiux-petedu.png" alt="PETEDU mobile app UI UX design">
+        </section>
+
+        <section class="project-row project-02 uiux-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>PETS HOME</h2>
+            <h3>UI/UX DESIGN</h3>
+            <ul><li>User Interface Design</li><li>User Experience Design</li><li>Mobile Application</li></ul>
+            <p>A mobile application designed to help users report, rescue, and support stray pets through an intuitive interface that encourages community participation and animal welfare.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/uiux-petshome.png" alt="Pets Home mobile app UI UX design">
+        </section>
+
+
+        <section class="project-row project-01 print-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>SUNCART CORPORATE<br>BROCHURE</h2>
+            <h3>PRINT DESIGN</h3>
+            <ul><li>Brochure Design</li><li>Business Card Design</li><li>Print Materials</li></ul>
+            <p>A corporate print design project featuring a professional brochure and business card set, designed to communicate the brand’s vision, services, and identity through a clean and engaging layout.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/print-suncart.png" alt="Suncart corporate brochure print design">
+        </section>
+
+        <section class="project-row project-02 print-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>NATIONAL MUSEUM OF EGYPTIAN<br>CIVILIZATION</h2>
+            <h3>PRINT DESIGN</h3>
+            <ul><li>Brochure Design</li><li>Editorial Design</li><li>Print Materials</li></ul>
+            <p>A brochure design project created to showcase the museum’s collections, history, and cultural significance through an informative and visually engaging layout.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/print-museum.png" alt="National Museum of Egyptian Civilization print design">
+        </section>
+
+        <section class="project-row project-03 print-project work-reveal" data-work-tilt>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h2>BOOK COVER<br>COLLECTION</h2>
+            <h3>PRINT DESIGN</h3>
+            <ul><li>Book Cover Design</li><li>Editorial Design</li><li>Marketing Materials</li></ul>
+            <p>A series of educational book cover designs developed to create a strong visual identity, enhance readability, and attract learners through engaging and modern layouts.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/print-book-covers.png" alt="Book cover collection print design">
+        </section>
+
+
+        <section class="project-row project-01 social-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>SAUDI FOUNDING DAY<br>CAMPAIGN</h2>
+            <h3>SOCIAL MEDIA</h3>
+            <ul><li>Social Media Design</li><li>Social Media Design</li><li>Marketing Content</li></ul>
+            <p>Saudi Founding Day campaign for Qabs Tea &amp; Bakery with bold promotional visuals and cultural branding.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/social-qabs.png" alt="Saudi Founding Day social media campaign">
+        </section>
+
+        <section class="project-row project-02 social-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>PAWCHEF SOCIAL MEDIA<br>CAMPAIGN</h2>
+            <h3>SOCIAL MEDIA</h3>
+            <ul><li>Social Media Design</li><li>Advertising Campaign</li><li>Marketing Content</li></ul>
+            <p>A social media campaign created to promote PawChef products through engaging visuals, consistent branding, and compelling content that highlights healthy nutrition for pets.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/social-pawchef.png" alt="PawChef social media campaign">
+        </section>
+
+        <section class="project-row project-03 social-project work-reveal" data-work-tilt>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h2>DENTAL STUDIO SOCIAL MEDIA<br>CAMPAIGN</h2>
+            <h3>SOCIAL MEDIA DESIGN</h3>
+            <ul><li>Social Media Design</li><li>Advertising Campaign</li><li>Brand Awareness</li></ul>
+            <p>A social media campaign designed to raise dental health awareness through engaging visuals, creative concepts, and informative content that strengthens brand presence and audience engagement.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/social-dental.png" alt="Dental Studio social media campaign">
+        </section>
+
+        <section class="project-row project-04 social-project work-reveal" data-work-tilt>
+          <div class="project-number">04</div>
+          <div class="project-info">
+            <h2>MERICANA BEANS<br>CAMPAIGN</h2>
+            <h3>SOCIAL MEDIA DESIGN</h3>
+            <ul><li>Social Media Design</li><li>Advertising Campaign</li><li>Marketing Content</li></ul>
+            <p>A Ramadan social media campaign created for Americana Fava Beans, featuring engaging visuals and seasonal content designed to promote the product and strengthen customer engagement.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/social-americana.png" alt="Americana beans social media campaign">
+        </section>
+
+
+        <section class="project-row project-01 illustration-project work-reveal" data-work-tilt>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h2>ANIMATION<br>PRE-PRODUCTION</h2>
+            <h3>ILLUSTRATION</h3>
+            <ul><li>Character Design</li><li>Environment Concept</li><li>Illustration Style</li></ul>
+            <p>A pre-production illustration project focused on character creation, turnaround development, and environment sketches for animated storytelling and world-building.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/illustration-animation-preproduction.png" alt="Animation pre-production illustration project">
+        </section>
+
+        <section class="project-row project-02 illustration-project work-reveal" data-work-tilt>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h2>DIGITAL PAINTING<br>STUDIES</h2>
+            <h3>ILLUSTRATION</h3>
+            <ul><li>Digital Painting</li><li>Color Studies</li><li>Value Studies</li></ul>
+            <p>A collection of digital painting studies focused on eye anatomy, lighting, color exploration, and emotional expression to strengthen observation and rendering skills.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/illustration-digital-painting.png" alt="Digital painting studies illustration project">
+        </section>
+
+        <section class="project-row project-03 illustration-project work-reveal" data-work-tilt>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h2>CHARACTER ILLUSTRATION<br>STUDIES</h2>
+            <h3>ILLUSTRATION</h3>
+            <ul><li>Character Design</li><li>Digital Painting</li><li>Stylized Illustration</li></ul>
+            <p>A collection of character illustration studies focused on stylized design, color exploration, lighting techniques, and expressive character development.</p>
+            <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">View Case Study ↗</a>
+          </div>
+          <img class="project-image" src="assets/illustration-character-studies.png" alt="Character illustration studies project">
+        </section>
+
+      </div>
+    </main>
+  </section>
+
+
+  <section class="services-page page-section" id="services" data-section-name="services">
+    <div class="services-wrap">
+      <div class="services-hero">
+        <section class="services-copy service-reveal">
+          <div class="services-script">WHAT I DO</div>
+          <img class="services-script-line" src="assets/services-scribble.png" alt="">
+          <h1><span>SOLUTIONS</span><span>THAT MAKE</span><span class="blue">AN IMPACT</span></h1>
+          <p>I offer a range of creative services designed to help brands communicate clearly, stand out, and grow.</p>
+        </section>
+
+        <section class="services-collage service-reveal" data-tilt>
+          <img class="services-black-shape" src="assets/services-black-hero.png" alt="">
+          <img class="services-grid-under" src="assets/about-grid-piece.png" alt="">
+          <img class="services-brush" src="assets/services-blue-brush.png" alt="">
+          <img class="services-paper-x" src="assets/about-paper-x.png" alt="">
+          <div class="services-collage-copy">Every service is crafted to turn ideas into clear, creative, and meaningful visual experiences.</div>
+          <img class="services-collage-scribble" src="assets/about-scribble.png" alt="">
+        </section>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card service-card-light service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-branding.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-branding.png" alt="">
+            <h3>BRANDING</h3>
+            <span class="service-line"></span>
+            <p>Building strong identities that reflect your values and connect with the right audience.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card-dark service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-web.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-web.png" alt="">
+            <h3>WEB DESIGN</h3>
+            <span class="service-line"></span>
+            <p>Designing clean, modern, and responsive websites that are both functional and visually engaging.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card-light service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-illustration.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-illustration.png" alt="">
+            <h3>ILLUSTRATION</h3>
+            <span class="service-line"></span>
+            <p>Creating expressive digital artworks and character illustrations with unique visual storytelling.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card-dark service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-social.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-social-white.png" alt="">
+            <h3>SOCIAL MEDIA</h3>
+            <span class="service-line"></span>
+            <p>Crafting engaging content and visuals that build connection and grow your online presence.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card-light service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-uiux.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-uiux.png" alt="">
+            <h3>UI/UX DESIGN</h3>
+            <span class="service-line"></span>
+            <p>Designing intuitive interfaces and seamless user experiences that feel clear, useful, and engaging.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card-dark service-reveal" data-tilt>
+          <img class="service-card-bg" src="assets/services-card-print.png" alt="">
+          <div class="service-card-inner">
+            <img class="service-icon" src="assets/services-icon-print.png" alt="">
+            <h3>PRINT DESIGN</h3>
+            <span class="service-line"></span>
+            <p>Delivering impactful print materials that communicate your message with clarity and style.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-page page-section" id="contact" data-section-name="contact">
+    <div class="contact-wrap">
+      <div class="contact-hero">
+        <div class="contact-intro contact-reveal" data-tilt>
+          <img class="contact-paper-stack" src="assets/contact-paper-stack.png" alt="layered paper collage">
+          <div class="contact-intro-copy">
+            <h2><span>LET’S</span><span>CREATE</span><span class="blue">TOGETHER</span></h2>
+            <p>Have a project in mind or just want<br>to say hello?<br>I’d love to hear from you.</p>
+          </div>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-method contact-reveal" href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer">
+            <span class="contact-method-icon">
+              <img class="contact-method-paper" src="assets/contact-icon-paper.png" alt="">
+              <img class="contact-method-symbol behance" src="assets/contact-icon-behance.png" alt="Behance">
+            </span>
+            <span class="contact-method-line"></span>
+            <span class="contact-method-text">www.behance.net/zyadzyad6</span>
+          </a>
+
+          <a class="contact-method contact-reveal" href="https://wa.me/201100328848" target="_blank" rel="noopener noreferrer">
+            <span class="contact-method-icon">
+              <img class="contact-method-paper" src="assets/contact-icon-paper.png" alt="">
+              <img class="contact-method-symbol" src="assets/contact-icon-whatsapp.png" alt="WhatsApp">
+            </span>
+            <span class="contact-method-line"></span>
+            <span class="contact-method-text">+20 1100328848</span>
+          </a>
+
+          <a class="contact-method contact-reveal" href="mailto:zyadzyadqqqqq@gmail.com">
+            <span class="contact-method-icon">
+              <img class="contact-method-paper" src="assets/contact-icon-paper.png" alt="">
+              <img class="contact-method-symbol" src="assets/contact-icon-email.png" alt="Email">
+            </span>
+            <span class="contact-method-line"></span>
+            <span class="contact-method-text">zyadzyadqqqqq@gmail.com</span>
+          </a>
+
+          <a class="download-cv-btn contact-reveal" href="assets/zeyad-cv.pdf" download="Zeyad-Sayed-CV.pdf">
+            <span>Download CV</span>
+            <em>↓</em>
+          </a>
+        </div>
+
+        <img class="contact-corner-note contact-reveal" src="assets/about-paper-x.png" alt="">
+        <div class="contact-dot-grid contact-reveal" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-footer contact-reveal">
+        <img class="contact-footer-strip" src="assets/contact-footer-strip.png" alt="">
+
+        <div class="contact-footer-left">
+          <img src="assets/logo.png" alt="ZE logo">
+          <div class="contact-footer-brand">
+            <p>Building brands and digital<br>experiences that matter.</p>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="contact-footer-nav">
+          <a href="#home">HOME</a>
+          <a href="#services">SERVICES</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#work">WORK</a>
+        </div>
+
+        <div class="contact-footer-note">
+          <div class="contact-footer-note-text">Let’s make<br>something great.</div>
+          <img class="contact-footer-note-scribble" src="assets/about-scribble.png" alt="">
+        </div>
+
+        <div class="contact-footer-socials">
+          <a href="https://wa.me/201100328848" target="_blank" rel="noopener noreferrer" class="contact-social-link"><img src="assets/contact-icon-whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://www.behance.net/zyadzyad6" target="_blank" rel="noopener noreferrer" class="contact-social-link"><img src="assets/contact-icon-behance.png" alt="Behance"></a>
+          <a href="mailto:zyadzyadqqqqq@gmail.com" class="contact-social-link"><img src="assets/contact-icon-email.png" alt="Email"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>

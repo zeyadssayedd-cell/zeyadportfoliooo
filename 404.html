@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 | Page Not Found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:100%;min-height:100%;overflow-x:hidden}
+    body{
+      min-height:100vh;
+      background:#ebe8e6;
+      color:#111;
+      font-family:'Montserrat',sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .error-page{
+      position:relative;
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:44px 24px;
+      overflow:hidden;
+    }
+
+    .dot-grid{
+      position:absolute;
+      right:9.5%;
+      top:9%;
+      width:118px;
+      height:118px;
+      background-image:radial-gradient(circle,#111 2px,transparent 2.1px);
+      background-size:18px 18px;
+      opacity:.92;
+      animation:dotFloat 4.6s ease-in-out infinite;
+    }
+
+    .error-stage{
+      position:relative;
+      width:min(88vw,1230px);
+      aspect-ratio:1638/1011;
+      animation:stageIn .95s cubic-bezier(.22,.84,.18,1) both;
+    }
+
+    .base-collage{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      filter:drop-shadow(0 24px 28px rgba(0,0,0,.12));
+      animation:paperFloat 5.2s ease-in-out 1s infinite;
+      pointer-events:none;
+      user-select:none;
+    }
+
+    .paper-copy{
+      position:absolute;
+      left:25.5%;
+      top:21.2%;
+      width:48.5%;
+      text-align:center;
+      z-index:3;
+      animation:copyIn .82s cubic-bezier(.22,.84,.18,1) .28s both;
+    }
+
+    .error-code{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(110px,15vw,245px);
+      line-height:.82;
+      letter-spacing:.12em;
+      color:#000;
+      font-weight:800;
+      margin-left:.12em;
+      display:flex;
+      justify-content:center;
+      gap:.18em;
+      text-shadow:0 18px 18px rgba(0,0,0,.04);
+    }
+
+    .error-code span{
+      display:inline-block;
+      animation:numberBounce 2.6s ease-in-out infinite;
+    }
+    .error-code span:nth-child(2){animation-delay:.16s}
+    .error-code span:nth-child(3){animation-delay:.32s}
+
+    .page-not-found{
+      margin-top:28px;
+      font-size:clamp(24px,2.5vw,44px);
+      letter-spacing:.42em;
+      font-weight:500;
+      color:#111;
+      white-space:nowrap;
+      margin-left:.42em;
+    }
+
+    .paper-scribble{
+      margin:24px auto 0;
+      width:min(260px,34%);
+      height:26px;
+      position:relative;
+      opacity:.95;
+    }
+    .paper-scribble::before,
+    .paper-scribble::after{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:50%;
+      width:100%;
+      height:2px;
+      background:#111;
+      transform-origin:center;
+      animation:scribbleDraw 2.7s ease-in-out infinite;
+    }
+    .paper-scribble::before{transform:translate(-50%,-50%) rotate(-2deg)}
+    .paper-scribble::after{width:68%;transform:translate(-50%,5px) rotate(2deg);opacity:.9}
+
+    .error-message{
+      position:absolute;
+      left:25%;
+      top:74.5%;
+      width:50%;
+      text-align:center;
+      font-size:clamp(22px,2.25vw,34px);
+      line-height:1.35;
+      font-weight:500;
+      letter-spacing:.01em;
+      z-index:4;
+      animation:copyIn .82s cubic-bezier(.22,.84,.18,1) .5s both;
+    }
+
+    .error-message .blue{color:#46bdd5}
+
+    .back-home{
+      position:absolute;
+      left:50%;
+      top:86.7%;
+      transform:translateX(-50%);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      min-width:260px;
+      padding:16px 28px;
+      background:#000;
+      color:#fff;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:17px;
+      letter-spacing:.08em;
+      font-weight:800;
+      z-index:5;
+      overflow:hidden;
+      animation:buttonIn .82s cubic-bezier(.22,.84,.18,1) .68s both, buttonFloat 3.6s ease-in-out 1.6s infinite;
+      transition:transform .32s cubic-bezier(.22,.84,.18,1), filter .32s ease, color .32s ease;
+    }
+    .back-home::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:#46bdd5;
+      transform:translateX(-105%);
+      transition:transform .36s cubic-bezier(.22,.84,.18,1);
+      z-index:0;
+    }
+    .back-home span,.back-home strong{position:relative;z-index:1}
+    .back-home span{font-size:28px;color:#46bdd5;transition:transform .32s ease,color .32s ease}
+    .back-home strong{font-weight:800}
+    .back-home:hover{
+      transform:translateX(-50%) translateY(-8px) rotate(-.6deg);
+      color:#000;
+      filter:drop-shadow(0 18px 16px rgba(0,0,0,.16));
+    }
+    .back-home:hover::before{transform:translateX(0)}
+    .back-home:hover span{color:#000;transform:translateX(-6px)}
+
+    @keyframes stageIn{
+      from{opacity:0;transform:translateY(34px) scale(.96);filter:blur(8px)}
+      to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+    }
+    @keyframes paperFloat{
+      0%,100%{transform:translateY(0) rotate(0)}
+      50%{transform:translateY(-10px) rotate(-.25deg)}
+    }
+    @keyframes copyIn{
+      from{opacity:0;transform:translateY(24px);filter:blur(8px)}
+      to{opacity:1;transform:translateY(0);filter:blur(0)}
+    }
+    @keyframes numberBounce{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+    @keyframes scribbleDraw{
+      0%,100%{opacity:.75;transform:translate(-50%,-50%) scaleX(.92) rotate(-2deg)}
+      50%{opacity:1;transform:translate(-50%,-50%) scaleX(1.06) rotate(-2deg)}
+    }
+    @keyframes buttonIn{
+      from{opacity:0;transform:translateX(-50%) translateY(22px)}
+      to{opacity:1;transform:translateX(-50%) translateY(0)}
+    }
+    @keyframes buttonFloat{
+      0%,100%{transform:translateX(-50%) translateY(0)}
+      50%{transform:translateX(-50%) translateY(-5px)}
+    }
+    @keyframes dotFloat{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(10px)}
+    }
+
+    @media(max-width:900px){
+      .error-stage{width:min(96vw,780px); aspect-ratio:1/1.05}
+      .base-collage{object-fit:contain;transform:scale(1.08)}
+      .paper-copy{left:17%;top:18%;width:66%}
+      .error-code{font-size:clamp(90px,22vw,160px)}
+      .page-not-found{font-size:clamp(18px,4vw,28px);letter-spacing:.28em;margin-left:.28em}
+      .error-message{left:12%;top:69%;width:76%;font-size:clamp(18px,4vw,26px)}
+      .back-home{top:85%;min-width:220px;font-size:14px;padding:14px 22px}
+      .dot-grid{right:24px;top:24px;transform:scale(.75)}
+    }
+
+    @media(max-width:560px){
+      .error-page{padding:20px 12px}
+      .dot-grid{display:none}
+      .paper-copy{top:20%}
+      .error-code{letter-spacing:.08em;gap:.12em}
+      .page-not-found{margin-top:14px;letter-spacing:.18em;margin-left:.18em}
+      .paper-scribble{margin-top:12px}
+      .error-message{top:68%;font-size:18px}
+      .back-home{top:84%;min-width:190px}
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <div class="dot-grid" aria-hidden="true"></div>
+
+    <section class="error-stage" aria-label="404 page not found">
+      <img class="base-collage" src="assets/404-collage-base.png" alt="404 collage paper background" />
+
+      <div class="paper-copy">
+        <div class="error-code" aria-label="404">
+          <span>4</span><span>0</span><span>4</span>
+        </div>
+        <div class="page-not-found">PAGE NOT FOUND</div>
+        <div class="paper-scribble" aria-hidden="true"></div>
+      </div>
+
+      <p class="error-message">
+        Looks like this page got lost<br>
+        somewhere between <span class="blue">creativity</span> and <span class="blue">code</span>
+      </p>
+
+      <a class="back-home" href="index.html">
+        <span>←</span>
+        <strong>Back to <em>Home</em></strong>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
